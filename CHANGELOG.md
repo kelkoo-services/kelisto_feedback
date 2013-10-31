@@ -8,6 +8,6 @@
 
 ## 0.6.0 (October 31, 2013)
 
-* JSON return handle with an alert box.
+* JSON error return handle with an alert box.
 * Delete test files and folder, were a dummy section.
 * Improve README and add CHANGELOG :)
