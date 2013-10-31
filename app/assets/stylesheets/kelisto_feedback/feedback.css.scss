@@ -1,0 +1,99 @@
+@import "settings";
+
+$kelisto:   #861F82;
+$gray:      #e4e4e4;
+$error_red: #C00000;
+
+#feedback{
+
+  display: none;
+  h1{
+    padding: .6em 0 .6em 1.2em;
+    font-size:  1.2em;
+    color:      #fff;
+    background: $kelisto;
+    margin:     0 auto 2em auto;
+    @include border-corner-radius(top,left, .2em);
+    @include background-image(linear-gradient(to bottom, $kelisto, darken($kelisto,7)));
+    border-top: 1px darken($kelisto, 10) solid;
+  }
+  div.feedback-wrapper{
+    width:80%;
+    margin:1em auto;
+  }
+  p{
+    margin: 0 auto 1.5em auto;
+  }
+  form{
+    width: 100%;
+    margin: 1em auto 3em auto;
+
+    .column1{
+      float:left;
+      width:25%;
+      color: darken($gray, 20);
+      label{
+        margin: .2em auto .6em auto;
+        font-weight: normal;
+      }
+    }
+    .column2{
+      float:right;
+      width:70%;
+    }
+    label.error{
+      color: $error_red;
+    }
+
+    #terms-wrapper{
+      label{
+        display: inline;
+        font-size: .9em;
+      }
+      input{
+        position:relative;
+        top: -.05em;
+        margin-right: .3em;
+      }
+    }
+    input, textarea{
+      margin-bottom: 1em;
+      &.error{
+        border: 1px $error_red solid;
+      }
+    }
+    input.email{
+      width: 40%;
+      padding: 0 .5em;
+    }
+    input[type="submit"]{
+      clear: both;
+      float:right;
+      margin-top: 1em;
+    }
+    textarea{
+      height: 8em;
+      padding: 1em .5em;
+    }
+  }
+}
+
+#feedback-handle{
+  position:       fixed;
+  bottom:         15%;
+  left:          -.1em;
+  width:          2.1em;
+  height:         7em;
+  // @include background-image(linear-gradient(to right, $kelisto, lighten($kelisto,15)));
+  // background: linear-gradient(to right, $kelisto, darken($kelisto,10)) image-url('feedback.png') top right no-repeat;
+  background:     $kelisto image-url('feedback.png') center center no-repeat;
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0em 0em .4em .1em);
+  @include border-corner-radius(top,right,.3em);
+  @include border-corner-radius(bottom,right,.3em);
+  border-left:   4px darken($kelisto, 5) solid;
+  cursor:         pointer;
+  &:hover{
+    left:          0;
+    @include box-shadow(none);
+  }
+}

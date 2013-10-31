@@ -1,0 +1,20 @@
+!!!
+%html
+
+  %head
+    %title= @title
+    %meta{"http-equiv" => "Content-Type", "content" => "text/html; charset=iso-8859-1"}
+    = stylesheet_link_tag 'kelisto_feedback_mailer/common'
+    = stylesheet_link_tag 'kelisto_feedback_mailer/tables'
+
+  %body
+    %table.main-content
+      %tbody
+        %tr
+          %td= render 'feeback_mailers/header'
+
+        %tr
+          %td= yield
+
+        %tr
+          %td= render 'feedback_mailers/footer'

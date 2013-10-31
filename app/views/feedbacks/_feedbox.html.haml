@@ -1,0 +1,30 @@
+#feedback
+  %h1
+    Feedback
+
+  .feedback-wrapper
+    %p
+      Ayudanos a mejorar la experiencia en 
+      %strong Kelisto.es
+      compartiendo con nosotros tu opinión o alguna sugerencia!
+    %p
+      Si tienes algún problema técnico, o cualquier tipo de duda, por favor, no dudes en ponerte en contacto con nosotros!
+
+    %form.clearfix
+      .column1
+        %label{:for=>"from"}
+          Dónde te respondemos?
+        %label{:for=>"message"}
+          Tu mensaje, opinión...
+      .column2
+        %input{type:"text", placeholder:"tu correo electrónico", name:"from", class:"email", value:"#{@user_email}"}
+        %textarea{placeholder:"tu mensaje...", name: "message", id:"message"}
+
+        #terms-wrapper
+          %input{type:"checkbox", name: "terms", id:"terms"}
+          %label{:for=>"terms"}
+            Confirmo que he leído y acepto la
+            %a{:href => "/politica-de-privacidad"}
+              política de privacidad
+
+      %input{type:"submit"}
