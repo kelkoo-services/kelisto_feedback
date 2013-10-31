@@ -1,6 +1,6 @@
 class FeedbackMailer < ActionMailer::Base
-  # layout "feedback_mail"
-  default to: "guillermo.guerrero@kelisto.es"
+  layout "feedback_mail"
+  default to: "support.team@kelisto.es"
 
   def feed_us(data = {})
     @message = data[:message]
