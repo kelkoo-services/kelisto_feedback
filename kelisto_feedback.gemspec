@@ -14,7 +14,6 @@ Gem::Specification.new do |s|
   s.description = "Kelisto's feedback button and submit form"
 
   s.files = `git ls-files`.split("\n")
-  s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.14"
   s.add_dependency "jquery-rails"

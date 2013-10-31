@@ -59,10 +59,8 @@ class @Feedback
           dataType: "json"  #response to expect
           data: $(form).serialize()
           success: (data, status) ->
-            console.log data
           error: (jqXHR, status, error) ->
-            console.log status
-            console.log error
+            alert "Imposible enviar email! Por favor, inténtelo de nuevo más tarde."
           complete: ->
             $.fancybox.close();
 

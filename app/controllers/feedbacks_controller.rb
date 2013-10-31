@@ -4,7 +4,7 @@ class FeedbacksController < ApplicationController
   def create
     mail_data = params.slice(:from, :message)
     FeedbackMailer.feed_us(mail_data).deliver
-
+    
     render json: { message: "Email envíado." }.to_json, 
            status: :created
   rescue
