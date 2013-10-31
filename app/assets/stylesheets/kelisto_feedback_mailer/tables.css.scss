@@ -1,0 +1,46 @@
+@import "settings";
+
+table.main-content {
+  width: 600px;
+  margin: auto;
+
+  tr {
+    height: 35px;
+
+    td {
+      text-align: left;
+      padding: 5px 0px;
+    }
+  }
+}
+
+table.header-info {
+  margin-bottom: 25px;
+  width: 600px;
+
+  tr.line {
+    height: 20px;
+    td {
+      border-top: 1px solid #dedede;
+    }
+  }
+}
+
+table.footer-logo {
+  margin-top: 25px;
+  width: 600px;
+
+  tr.line {
+    height: 20px;
+    td {
+      border-bottom: 1px solid #dedede;
+    }
+  }
+}
+
+table.footer-info {
+  margin-top: 25px;
+  color: #4a4a4a;
+  font-size: 0.9em;
+  font-style: italic; 
+}

@@ -5,10 +5,10 @@ class FeedbacksController < ApplicationController
     mail_data = params.slice(:from, :message)
     FeedbackMailer.feed_us(mail_data).deliver
 
-    render json: { message: "Email sent :)" }.to_json, 
+    render json: { message: "Email envíado." }.to_json, 
            status: :created
   rescue
-    render json: { message: "Cannot send email!!" }.to_json, 
+    render json: { message: "Imposible enviar email!" }.to_json, 
            status: :unprocessable_entity
   end
 end

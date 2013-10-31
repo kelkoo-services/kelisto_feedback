@@ -1,0 +1,20 @@
+@import "settings";
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+}
+
+.title {
+  color: $purple;
+  font-size: 1.8em; 
+  font-weight: 600;
+  padding: 10px 0px 0px;
+}
