@@ -1,5 +1,5 @@
 The **KelistoFeedback** plugin adds a button and a fancybox to each project that 
-includes it and let you send feedback to the [Kelisto.es}(http://wwww.kelisto.es) Support Team.
+includes it and let you send feedback to the [Kelisto.es](http://wwww.kelisto.es) Support Team.
 
 ## Installation
 
@@ -28,7 +28,11 @@ $ gem install kelisto_feedback
 For CSS, in your *application.css* add the following line:
 
 ```css
-*= require kelisto-assets
+/*
+ *
+ *= require kelisto-assets
+ *
+ */
 ```
 
 For JS, in your *application.js* add the following line:
