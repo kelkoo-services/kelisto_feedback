@@ -5,7 +5,7 @@ includes it and let you send feedback to the [Kelisto.es](http://wwww.kelisto.es
 
 ## Installation
 
-Add these lines to your application's Gemfile:
+Add these line to your application's Gemfile:
 
 ```ruby
 gem "kelisto_feedback", git: 'https://github.com/kelkoo-services/kelisto_feedback.git'
