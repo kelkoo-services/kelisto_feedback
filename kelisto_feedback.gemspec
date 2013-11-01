@@ -20,6 +20,9 @@ Gem::Specification.new do |s|
   s.add_dependency "nokogiri"
   s.add_dependency "premailer-rails"
   s.add_dependency "haml"
+  s.add_dependency "susy"
+  s.add_dependency "compass-rails"
+  s.add_dependency "compass-normalize"
 
   s.add_development_dependency "sqlite3"
 end
