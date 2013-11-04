@@ -7,8 +7,8 @@ class FeedbacksController < ApplicationController
     
     render json: { message: "Email enviado." }.to_json, 
            status: :created
-  rescue
-    render json: { message: "Imposible enviar email!" }.to_json, 
-           status: :unprocessable_entity
+  # rescue
+  #   render json: { message: "Imposible enviar email!" }.to_json, 
+  #          status: :unprocessable_entity
   end
 end
