@@ -1,3 +1,4 @@
+# Encoding: utf-8
 class FeedbacksController < ApplicationController
   respond_to :json
 
