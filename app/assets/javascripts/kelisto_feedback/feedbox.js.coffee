@@ -47,7 +47,7 @@ class @Feedback
       # terms and conditions have special error placement
       errorPlacement: (error, element) ->
         # on the quiz form we add our div to the left of the radio with a small X
-        $(error).insertAfter(element);
+        $(error).insertBefore(element);
 
 
 

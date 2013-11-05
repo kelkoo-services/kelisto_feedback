@@ -42,13 +42,18 @@ $error_red: #C00000;
       width:70%;
     }
     label.error{
+      display: block;
       color: $error_red;
+      font-size: .9em;
     }
 
     #terms-wrapper{
       label{
         display: inline;
         font-size: .9em;
+        &.error{
+          display: block;
+        }
       }
       input{
         position:relative;
@@ -63,7 +68,7 @@ $error_red: #C00000;
       }
     }
     input.email{
-      width: 40%;
+      width: 60%;
       padding: 0 .5em;
     }
     input[type="submit"]{
@@ -86,7 +91,7 @@ $error_red: #C00000;
   height:         7em;
   // @include background-image(linear-gradient(to right, $kelisto, lighten($kelisto,15)));
   // background: linear-gradient(to right, $kelisto, darken($kelisto,10)) image-url('feedback.png') top right no-repeat;
-  background:     $kelisto image-url('feedback.png') center center no-repeat;
+  background:     $kelisto image-url('ayuda.png') center center no-repeat;
   @include box-shadow(rgba(0, 0, 0, 0.3) 0em 0em .4em .1em);
   @include border-corner-radius(top,right,.3em);
   @include border-corner-radius(bottom,right,.3em);
