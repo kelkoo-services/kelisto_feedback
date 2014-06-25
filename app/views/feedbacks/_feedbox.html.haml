@@ -4,27 +4,27 @@
 
   .feedback-wrapper
     %p
-      Ayudanos a mejorar la experiencia en 
+      Ayudanos a mejorar la experiencia en
       %strong Kelisto.es
       compartiendo con nosotros tu opinión o alguna sugerencia!
     %p
       Si tienes algún problema técnico, o cualquier tipo de duda, por favor, no dudes en ponerte en contacto con nosotros!
 
     %form.clearfix
-      .column1
+      .column1.form-group
         %label{:for=>"from"}
           Dónde te respondemos?
         %label{:for=>"message"}
           Tu mensaje, opinión...
-      .column2
-        %input{type:"text", placeholder:"tu correo electrónico", name:"from", class:"email", value:"#{@user_email}"}
-        %textarea{placeholder:"tu mensaje...", name: "message", id:"message"}
+      .column2.form-group
+        %input{type:"text", placeholder:"tu correo electrónico", name:"from", class:"email form-control", value:"#{@user_email}"}
+        %textarea{placeholder:"tu mensaje...", name: "message", id:"message", class:"form-control"}
 
         #terms-wrapper
-          %input{type:"checkbox", name: "terms", id:"terms"}
-          %label{:for=>"terms"}
+          %input{type:"checkbox", name: "terms", id:"feedback-terms"}
+          %label{:for=>"feedback-terms"}
             Confirmo que he leído y acepto la
             %a{:href => "/politica-de-privacidad"}
               política de privacidad
 
-      %input{type:"submit", value: "Enviar"}
+        %input{type:"submit", value: "Enviar", class:"btn btn-primary"}

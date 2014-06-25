@@ -4,61 +4,8 @@
 @import "compass/utilities/general/min";
 @import "compass/typography/vertical_rhythm";
 @import "compass/typography/text/replacement";
-/**********************
-*
-* SUSY CONFIGURATION
-*
-***********************/
-@include border-box-sizing;
-// http://susy.oddbird.net/demos/grid-types/#demo-mix
-$total-columns: 12;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: 0em;
 
-$container-style: magic;
-$container-width: 980px;
 
-// http://susy.oddbird.net/guides/reference/#ref-base-font-size
-$base-font-size: 16px;
-$relative-font-sizing: true;
-
-// http://susy.oddbird.net/guides/reference/#ref-browser-support
-$legacy-support-for-ie  : true;
-$legacy-support-for-ie7 : $legacy-support-for-ie;
-
-/**********************
-*
-* COLOURS
-*
-***********************/
-
-$main:#861f82;//purple
-$secondary:#eeaf00;//orange
-$green:#339933;//green
-
-/**********************
-*
-* MIXINS
-*
-***********************/
-@mixin clearfix-micro() {
-    & {
-        *zoom: 1;
-    }
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
-.clearfix { @include clearfix-micro();}
-/**********************
-*
-* HELPER CLASSES
-*
-***********************/
-.container { @include container;}
+$main:#861f82;              //purple
+$secondary:#eeaf00;         //orange
+$green:#339933;             //green

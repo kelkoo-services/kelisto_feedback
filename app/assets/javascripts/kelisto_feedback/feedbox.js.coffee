@@ -10,12 +10,14 @@ class @Feedback
     $('#feedback-handle').fancybox({
       closeBtn:   true,
       padding:    0,
-      autoSize:   false,
+      fitToView: true,
+      maxWidth: "800px",
       enableEscapeButton:true,
-      width:    '40%',
       height:   'auto',
       href:     '#feedback'
       beforeShow: @setValidation
+
+
     }); #which div to show as fancybox
 
   setValidation: ()->

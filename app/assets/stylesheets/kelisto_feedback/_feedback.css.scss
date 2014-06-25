@@ -7,6 +7,13 @@ $error_red: #C00000;
 #feedback{
 
   display: none;
+
+  font-size: .9em;
+
+  @media only screen and (min-width : 500px) {
+    font-size: 1em;
+  }
+
   h1{
     padding: .6em 0 .6em 1.2em;
     font-size:  1.2em;
@@ -68,12 +75,15 @@ $error_red: #C00000;
       }
     }
     input.email{
-      width: 60%;
+      width: 100%;
+      @media only screen and (min-width : 500px) {
+        width: 60%;
+      }
+
       padding: 0 .5em;
     }
     input[type="submit"]{
       clear: both;
-      float:right;
       margin-top: 1em;
     }
     textarea{
@@ -89,6 +99,8 @@ $error_red: #C00000;
   left:          -.1em;
   width:          2.1em;
   height:         7em;
+  z-index: 99;
+  opacity: .99; //handle was under the logos in the top box: how opacity changes stack context: http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
   // @include background-image(linear-gradient(to right, $kelisto, lighten($kelisto,15)));
   // background: linear-gradient(to right, $kelisto, darken($kelisto,10)) image-url('feedback.png') top right no-repeat;
   background:     $kelisto image-url('ayuda.png') center center no-repeat;
