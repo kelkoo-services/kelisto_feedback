@@ -1,8 +1,16 @@
 @import "feedback_settings";
 
-$kelisto:   #861F82;
+$kelisto:   #864587;
 $gray:      #e4e4e4;
 $error_red: #C00000;
+$light_grey:    #f8f9fa;
+$white:         #ffffff;
+$blue:          #79c8f0;
+$text:         #5b4e60;
+$orange:        #f97e3b;
+// Borders
+$dark_border :  #e5e5e1;
+$light_border:  #eeeeea;
 
 #feedback{
 
@@ -11,11 +19,9 @@ $error_red: #C00000;
     padding: .6em 0 .6em 1.2em;
     font-size:  1.2em;
     color:      #fff;
-    background: $kelisto;
+    background: $blue;
     margin:     0 auto 2em auto;
     @include border-corner-radius(top,left, .2em);
-    @include background-image(linear-gradient(to bottom, $kelisto, darken($kelisto,7)));
-    border-top: 1px darken($kelisto, 10) solid;
   }
   div.feedback-wrapper{
     width:80%;
@@ -91,11 +97,10 @@ $error_red: #C00000;
   height:         7em;
   // @include background-image(linear-gradient(to right, $kelisto, lighten($kelisto,15)));
   // background: linear-gradient(to right, $kelisto, darken($kelisto,10)) image-url('feedback.png') top right no-repeat;
-  background:     $kelisto image-url('ayuda.png') center center no-repeat;
-  @include box-shadow(rgba(0, 0, 0, 0.3) 0em 0em .4em .1em);
+  background:     $blue image-url('ayuda.png') center center no-repeat;
   @include border-corner-radius(top,right,.3em);
   @include border-corner-radius(bottom,right,.3em);
-  border-left:   4px darken($kelisto, 5) solid;
+  border:1px solid $light_border;
   cursor:         pointer;
   &:hover{
     left:          0;
