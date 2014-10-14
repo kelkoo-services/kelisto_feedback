@@ -1,29 +1,29 @@
 @import "feedback_settings";
 
-$kelisto:   #864587;
-$blue:   #009de0;
-$gray:      #e4e4e4;
-$error_red: #C00000;
-
+$kelisto:      #864587;
+$text:         #5b4e60;
+$blue:         #009de0;
+$gray:         #f8f9fa;
+$red_light:    #ea5958;
+$light_border: #e5e5e1;
 #feedback{
-
   display: none;
-
+  @include border-radius(1em);
+  background:#fff;
   font-size: .9em;
 
   @media only screen and (min-width : 500px) {
     font-size: 1em;
   }
 
-  h1{
-    padding: .6em 0 .6em 1.2em;
-    font-family:'Raleway';
-    font-size:  1.2em;
-    color:      #fff;
-    background: $blue;
-    margin:     0 auto 2em auto;
-    @include border-corner-radius(top,left, .2em);
-    border-top: 1px darken($blue, 10) solid;
+  h2{
+    padding: 1em 1em .5em 1em;
+    text-align:center;
+    font-family: 'Raleway';
+    font-size: 3em;
+    color:      $blue;
+    background: #fff;
+    @include border-top-radius(.2em);
   }
   div.feedback-wrapper{
     width:80%;
@@ -31,6 +31,8 @@ $error_red: #C00000;
   }
   p{
     margin: 0 auto 1.5em auto;
+    font-family: Raleway;
+    color:$text;
   }
   form{
     width: 100%;
@@ -39,7 +41,7 @@ $error_red: #C00000;
     .column1{
       float:left;
       width:25%;
-      color: darken($gray, 20);
+      color: lighten($text, 20);
       label{
         margin: .2em auto .6em auto;
         font-weight: normal;
@@ -51,49 +53,98 @@ $error_red: #C00000;
     }
     label.error{
       display: block;
-      color: $error_red;
+      color: $red_light;
       font-size: .9em;
     }
 
     #terms-wrapper{
       label{
-        display: inline;
-        font-size: .9em;
-        &.error{
-          display: block;
-        }
+        cursor:pointer;
       }
-      input{
-        position:relative;
-        top: -.05em;
-        margin-right: .3em;
+      input[type="radio"], input[type="checkbox"] {
+        -webkit-appearance: none;
+        outline:none;
+        position: relative;
+        border-radius: 3em;
+        display: inline-block;
+        vertical-align: middle;
+        margin: -0.3em 0.25em 0 0;
+        padding: 0;
+        width: 1.3em;
+        height: 1.3em;
+        background: white;
+        border-radius: 50%;
+        font-size: 0.9em;
+        cursor: pointer;
+        box-shadow: inset 0 1px 1px $gray;
+        -webkit-transition: box-shadow 200ms, border-color 200ms, background 300ms;
+        -moz-transition: box-shadow 200ms, border-color 200ms, background 300ms;
+        transition: box-shadow 200ms, border-color 200ms, background 300ms;
+
+        &:focus {
+          outline: none;
+        }
+        &:hover{
+          border:solid 2px $blue;
+        }
+        &:checked{
+          background: $blue;
+          box-shadow: inset 0 1px 3px $gray, inset 0 0 0 0.2em white;
+        }
+        &:checked:hover{
+          box-shadow: inset 0 1px 0px $blue, inset 0 0 0 0.3em white, 0 0 1px 3px $blue;
+          border:solid 1px $blue;
+        }
+        &:checked:active{
+          background: $blue;
+          border:solid 1px $blue;
+          box-shadow:none;
+        }
       }
     }
     input, textarea{
       margin-bottom: 1em;
+      border: solid 3px $light_border;
+      @include transition( all 0.05s ease-in-out);
+      @include box-shadow(none);
+      outline: none;
       &.error{
-        border: 1px $error_red solid;
+        border: 3px $red_light solid;
+      }
+      &:hover {
+        border:3px solid $blue;
+        cursor:pointer;
+      }
+      &:focus {
+        outline:none;
+        border:3px solid $blue;
+        background-color:transparent;
+        cursor:pointer;
       }
     }
     input.email{
       width: 100%;
+      padding: 1.2em;
+      font-size: 1.2em;
       @media only screen and (min-width : 500px) {
         width: 60%;
       }
-
-      padding: 0 .5em;
     }
     input[type="submit"]{
       clear: both;
       margin-top: 1em;
-      .btn-primary{
-        background-color: $blue;
-        border-color: $blue;
+      padding: .7em 44%;
+      background-color: $blue;
+      border-color: $blue;
+      color:#fff;
+      &:hover{
+        opacity:0.8;
       }
     }
     textarea{
       height: 8em;
-      padding: 1em .5em;
+      padding: 1.2em;
+      font-size: 1.2em;
     }
   }
 }
@@ -108,14 +159,17 @@ $error_red: #C00000;
   opacity: .99; //handle was under the logos in the top box: how opacity changes stack context: http://philipwalton.com/articles/what-no-one-told-you-about-z-index/
   // @include background-image(linear-gradient(to right, $kelisto, lighten($kelisto,15)));
   // background: linear-gradient(to right, $kelisto, darken($kelisto,10)) image-url('feedback.png') top right no-repeat;
-  background:     #fff image-url('ayuda.png') center center no-repeat;
+  background:     #fff image-url('ayuda.svg') center center no-repeat;
   @include border-corner-radius(top,right,.3em);
   @include border-corner-radius(bottom,right,.3em);
-  border:   2px $blue solid;
+  border:   1px $light_border solid;
   border-left:   none;
   cursor:         pointer;
   &:hover{
     left:          0;
     @include box-shadow(none);
+  }
+  @media screen and (max-width: 480px) {
+    display:none;
   }
 }

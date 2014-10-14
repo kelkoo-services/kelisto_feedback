@@ -1,5 +1,5 @@
 #feedback
-  %h1
+  %h2
     ¿Te podemos ayudar?
 
   .feedback-wrapper
@@ -21,10 +21,11 @@
         %textarea{placeholder:"tu mensaje...", name: "message", id:"message", class:"form-control"}
 
         #terms-wrapper
-          %input{type:"checkbox", name: "terms", id:"feedback-terms"}
           %label{:for=>"feedback-terms"}
-            Confirmo que he leído y acepto la
-            %a{:href => "/politica-de-privacidad"}
-              política de privacidad
+            %input{type:"checkbox", name: "terms", id:"feedback-terms"}
+            %span
+              Confirmo que he leído y acepto la
+              %a{:href => "/politica-de-privacidad"}
+                política de privacidad
 
-        %input{type:"submit", value: "Enviar", class:"btn btn-primary"}
+        %input{type:"submit", value: "Enviar"}
