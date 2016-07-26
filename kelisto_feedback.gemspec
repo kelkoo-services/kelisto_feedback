@@ -15,15 +15,7 @@ Gem::Specification.new do |s|
 
   s.files = `git ls-files`.split("\n")
 
-  s.add_runtime_dependency "jquery-rails"
   s.add_runtime_dependency "nokogiri"
   s.add_runtime_dependency "premailer"
   s.add_runtime_dependency "premailer-rails"
-  s.add_runtime_dependency "haml"
-  s.add_runtime_dependency "coffee-rails", "~> 4"
-  s.add_runtime_dependency "sass-rails", "~> 4"
-  s.add_runtime_dependency "compass", ">= 0.12.2"
-  s.add_runtime_dependency "compass-rails", ">= 2.0"
-  s.add_runtime_dependency "susy", ">= 1.0.5"
-  s.add_runtime_dependency "compass-normalize", ">= 1.5"
 end
